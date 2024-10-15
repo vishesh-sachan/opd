@@ -20,7 +20,7 @@ export async function POST(req : Request) {
     }catch(e:any){
         if(e.errorResponse.code==11000){ 
             console.log(e)
-            return NextResponse.json({msg:"staff already exists"},{status:400})
+            return NextResponse.json({msg:"User already exists"},{status:400})
         }else{
             console.log(e)
             return NextResponse.json({msg:"Internal Server Error"},{status:400})

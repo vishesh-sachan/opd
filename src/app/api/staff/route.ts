@@ -71,7 +71,7 @@ export async function DELETE(req:Request) {
         }else{
             try{
                 await Inventory.deleteOne({_id:staffId})
-                return NextResponse.json({msg:"Item Deleted"},{status:200})
+                return NextResponse.json({msg:"Staff Deleted"},{status:200})
             }catch(e:any){
                 console.log(e)
                 return NextResponse.json({msg:"Internal Server Error"},{status:400})
